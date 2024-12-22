@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+	background: #121212;
+}
+
+.btn {
+	border: 2px solid rgba(0, 0, 0, 0);
+	border-radius: 25px;
+	padding: 12px;
+
+	font-family: "Roboto";
+	font-size: 18px;
+	font-weight: bold;
+
+	background: #db51c4;
+	color: white;
+
+	transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.btn:hover {
+	background: #f277cb;
+	cursor: pointer;
+	border-color: white;
+}
+
+.btn:active {
+	background: white;
+	color: #f277cb;
+}
+
+#container {
+	position: fixed; /* Фиксированное позиционирование */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%);
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	background: #212121;
+	color: white;
+
+	padding: 20px;
+	padding-top: 0px;
+	border-radius: 15px;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+#content h2 {
+	font-size: 30px;
+	font-family: "Roboto";
+
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+
+	text-align: center;
+	color: #db51c4;
+
+	cursor: default;
+}
+
+.input-field {
+	background: #2e2e2e;
+	color: white;
+
+	font-size: 16px;
+
+	padding: 8px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	width: 100%;
+
+	border-radius: 5px;
+	border: 2px solid #4a4a4a;
+}
+
+.input-field:focus {
+	outline: none;
+	border-color: #db51c4;
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+.form-group label {
+	font-family: "Roboto";
+	font-size: 20px;
+
+    display: block; /* Размещает label как блочный элемент */
+    margin-bottom: 5px; /* Отступ снизу для label */
+}
+
+.form-group textarea {
+	resize: none;
+	height: 100px;
+}
+
+#sign-up {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+#close {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+	position: absolute;
+	right: -60px;
+	top: 100px;
+
+	background: #212121;
+
+	border-radius: 50%;
+	border: 2px solid rgba(0, 0, 0, 0);
+
+	width: 50px;
+	height: 50px;
+
+	transition: background 0.3s, border 0.3s;
+}
+
+#close:hover {
+	background: #2e2e2e;
+	cursor: pointer;
+
+	border-color: #db51c4;
+}
+
+.close-img {
+	width: 30px;
+	transition: opacity 0.3s ease;
+}
