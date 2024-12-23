@@ -39,28 +39,38 @@ body {
 	display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
 }
 
 #content {
 	display: flex;
 	flex-direction: column;
+	position: relative;
+
 	background: #212121;
 	color: white;
 
 	padding: 20px;
 	padding-top: 0px;
 	border-radius: 15px;
+
+	z-index: 1001;
 }
 
 .hidden {
     opacity: 0;
-    transition: opacity 0.4s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .visible {
     opacity: 1;
-    transition: opacity 0.4s ease;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 #content h2 {
@@ -106,13 +116,21 @@ body {
 	font-family: "Roboto";
 	font-size: 20px;
 
-    display: block; /* Размещает label как блочный элемент */
-    margin-bottom: 5px; /* Отступ снизу для label */
+    display: block;
+    margin-bottom: 5px;
 }
 
 .form-group textarea {
 	resize: none;
 	height: 100px;
+}
+
+#form-container:invalid input[type="submit"] {
+	background: #2e2e2e;
+	border: 2px solid #4a4a4a;
+	color: white;
+
+	cursor: default;
 }
 
 #sign-up {
@@ -127,7 +145,7 @@ body {
 
 	position: absolute;
 	right: -60px;
-	top: 100px;
+	top: 0px;
 
 	background: #212121;
 
@@ -138,6 +156,8 @@ body {
 	height: 50px;
 
 	transition: background 0.3s, border 0.3s;
+
+	z-index: 1001;
 }
 
 #close:hover {

@@ -10,7 +10,7 @@
   <div id="container" class="hidden">
     <div id="content">
       <h2>Запись на фотосессию</h2>
-      <form>
+      <form id="form-container">
         <div class="form-group">
           <label for="name">Как вас зовут?</label>
           <input type="text" name="name" id="name" class="input-field" required>
@@ -27,11 +27,11 @@
           <label for="comment">Комментарий</label>
           <textarea name="comment" id="comment" class="input-field"></textarea>
         </div>
-        <button class="btn" id="sign-up">Отправить</button>
+        <input type="submit" class="btn" id="sign-up" value="Записаться">
       </form>
-    </div>
-    <div id="close">
-      <img src="img/icons8-close-120_off.png" class="close-img">
+      <div id="close">
+        <img src="img/icons8-close-120_off.png" class="close-img">
+      </div>
     </div>
   </div>
   <script src="js/main.js"></script>
