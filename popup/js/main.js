@@ -14,7 +14,8 @@ function container_toggle() {
 const form = document.getElementById('form-container');
 const inputs = form.querySelectorAll('input, textarea');
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (event) => {
+	event.preventDefault();
     let isValid = true;
 
     inputs.forEach(input => {
@@ -25,6 +26,15 @@ form.addEventListener('submit', () => {
 
     if (isValid) {
         container_toggle();
+
+        const success = document.getElementById("success");
+        success.classList.remove("hidden");
+        success.classList.add("visible");
+
+        const timer = setTimeout(() => {
+        	success.classList.remove("visible");
+        	success.classList.add("hidden");
+        }, 1000);
     }
 });
 

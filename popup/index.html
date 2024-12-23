@@ -7,8 +7,12 @@
 </head>
 <body>
   <button class="btn" id="pop-up">Записаться</button>
+  <div id="success" class="block hidden">
+    <img src="img/icons8-success-512.png" width="30">
+    <h2>Запись подтверждена!</h2>
+  </div>
   <div id="container" class="hidden">
-    <div id="content">
+    <div id="content" class="block">
       <h2>Запись на фотосессию</h2>
       <form id="form-container">
         <div class="form-group">
@@ -29,7 +33,7 @@
         </div>
         <input type="submit" class="btn" id="sign-up" value="Записаться">
       </form>
-      <div id="close">
+      <div id="close" class="block">
         <img src="img/icons8-close-120_off.png" class="close-img">
       </div>
     </div>

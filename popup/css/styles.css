@@ -4,6 +4,13 @@ body {
 	background: #121212;
 }
 
+.block {
+	background: #212121;
+	color: white;
+
+	z-index: 1001;
+}
+
 .btn {
 	border: 2px solid rgba(0, 0, 0, 0);
 	border-radius: 25px;
@@ -51,14 +58,9 @@ body {
 	flex-direction: column;
 	position: relative;
 
-	background: #212121;
-	color: white;
-
 	padding: 20px;
 	padding-top: 0px;
 	border-radius: 15px;
-
-	z-index: 1001;
 }
 
 .hidden {
@@ -147,8 +149,6 @@ body {
 	right: -60px;
 	top: 0px;
 
-	background: #212121;
-
 	border-radius: 50%;
 	border: 2px solid rgba(0, 0, 0, 0);
 
@@ -156,8 +156,6 @@ body {
 	height: 50px;
 
 	transition: background 0.3s, border 0.3s;
-
-	z-index: 1001;
 }
 
 #close:hover {
@@ -170,4 +168,28 @@ body {
 .close-img {
 	width: 30px;
 	transition: opacity 0.3s ease;
+}
+
+#success {
+	position: fixed; /* Фиксированное позиционирование */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%);
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	border-radius: 15px;
+}
+
+#success h2{
+	display: inline;
+	font-size: 20px;
+	font-family: "Roboto";
 }
